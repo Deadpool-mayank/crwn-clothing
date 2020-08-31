@@ -23,8 +23,7 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount(){
-
-    const {setCurrentUser} = this.props;
+    const {setCurrentUser } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if(userAuth){
@@ -34,15 +33,11 @@ class App extends React.Component {
           setCurrentUser({
               id: snapShot.id,
               ...snapShot.data()
-            })
-        });
+            });
+          });
       }
-      else
-      {
        setCurrentUser(userAuth); 
-      }
-    })
-  }
+      })}
 
   componentWillUnmount(){
     this.unsubscribeFromAuth();

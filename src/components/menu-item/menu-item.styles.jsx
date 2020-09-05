@@ -8,7 +8,7 @@ export const MenuItemContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid black;
+
 	margin: 0 7.5px 15px;
 	overflow: hidden;
 	&:hover {
@@ -35,6 +35,7 @@ export const BackgroundImageContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  border: 1px solid black;
 `;
 
 export const ContentContainer = styled.div`
@@ -48,7 +49,6 @@ export const ContentContainer = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
-  border: 1px solid black;
 `;
 
 export const ContentTitle = styled.span`
@@ -59,7 +59,6 @@ export const ContentTitle = styled.span`
 `;
 
 export const ContentSubtitle = styled.span`
-  font-weight: lighter;
-  font-size: 16px;
   font-weight: bolder;
+  font-size: 16px;
 `;
